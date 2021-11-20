@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: ${PROFILE:DEV}
+  application:
+    name: user-service
+  main:
+      allow-bean-definition-overriding: true
+  cloud:
+    config:
+      profile: native
+      uri: ${CONFIG_SERVER_URI:http://localhost:8888}
