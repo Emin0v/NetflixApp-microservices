@@ -12,6 +12,7 @@
         <module>eureka-service</module>
         <module>common-service</module>
         <module>config-service</module>
+        <module>movie-service</module>
     </modules>
     <packaging>pom</packaging>
 
