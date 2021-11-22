@@ -1,4 +1,4 @@
-package com.company.service.abstracts.mongo;
+package com.company.service.abstracts;
 
 import com.company.dto.movie.MovieResponse;
 import com.company.dto.movie.MovieSaveRequest;

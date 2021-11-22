@@ -1,4 +1,4 @@
-package com.company.service.abstracts.mongo;
+package com.company.service.abstracts;
 
 import com.company.dto.category.CategoryResponse;
 import com.company.dto.category.CategorySaveRequest;

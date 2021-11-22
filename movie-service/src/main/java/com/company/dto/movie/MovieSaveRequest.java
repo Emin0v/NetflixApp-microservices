@@ -9,6 +9,7 @@ import java.util.List;
 @Builder
 public class MovieSaveRequest {
 
+    private String id;
     private String name;
     private String code;
     private String categoryId;

@@ -15,7 +15,5 @@ public class MovieResponse {
     private String features;
     private Boolean active;
     private String image;
-    private int viewCount;
-
 
 }

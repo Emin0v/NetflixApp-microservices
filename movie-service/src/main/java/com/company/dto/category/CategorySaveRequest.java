@@ -7,6 +7,7 @@ import lombok.Data;
 @Builder
 public class CategorySaveRequest {
 
+    private String id;
     private String name;
     private String code;
 

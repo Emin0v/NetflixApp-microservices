@@ -24,6 +24,6 @@ public class Movie implements Serializable {
     private String description;
     private String features;
     private Boolean active;
-    private List<MovieImage> movieImageList;
+    private List<MovieImage> images;
 
 }
