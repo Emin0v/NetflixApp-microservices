@@ -8,4 +8,6 @@ import lombok.Data;
 public class CategorySaveRequest {
 
     private String name;
+    private String code;
+
 }

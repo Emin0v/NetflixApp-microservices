@@ -14,4 +14,5 @@ public interface MovieEsService {
     Flux<MovieEsResponse> getAllByCategoryId(String categoryId);
 
     Mono<MovieEsResponse> findById(String id);
+
 }

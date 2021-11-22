@@ -3,6 +3,7 @@ package com.company.service.abstracts.mongo;
 import com.company.dto.movie.MovieResponse;
 import com.company.dto.movie.MovieSaveRequest;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 public interface MovieService {
 
@@ -10,7 +11,6 @@ public interface MovieService {
 
     Flux<MovieResponse> getAllByCategoryId(String categoryId);
 
-    MovieResponse saveMovie(MovieSaveRequest request);
-
+    Mono<MovieResponse> saveMovie(MovieSaveRequest request);
 
 }
