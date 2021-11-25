@@ -3,6 +3,7 @@ package com.company.service.impl;
 import com.company.dto.UserCreateReqDTO;
 import com.company.dto.UserRespDTO;
 import com.company.dto.UserUpdateDTO;
+import com.company.exception.UserAlreadyExistsException;
 import com.company.exception.UserNotFoundException;
 import com.company.model.User;
 import com.company.repository.UserRepository;
@@ -28,6 +29,11 @@ public class UserServiceImpl implements IUserService {
     @Override
     @Transactional
     public void addUser(UserCreateReqDTO dto) {
+        var found = userRepository.findByUsername(dto.getUsername());
+        if (found.isPresent()){
+            throw new UserAlreadyExistsException(dto.getUsername());
+        }
+
         User user = adapter.map(dto);
         userRepository.save(user);
     }

@@ -1,0 +1,57 @@
+server:
+  port: 8502
+
+spring:
+  application:
+    name: movie-service
+
+  data:
+    elasticsearch:
+      client:
+        reactive:
+          endpoints: 192.168.99.100:9201
+
+    mongodb:
+      authentication-database: admin
+      auto-index-creation: true
+      database: movieDb
+      host: localhost
+      port: 27017
+
+eureka:
+  client:
+    instance:
+      hostname: ${EUREKA_SERVER_HOSTNAME:localhost}
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8500/eureka/}
+
+management:
+  health:
+    elasticsearch:
+      enabled: false
+    mongo:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+s3:
+  url: http://192.168.99.100:9000
+  access-key: shopping-minio
+  secret-key: shopping-minio
+  bucket: shopping-app
+
+#security:
+#  jwtProperties:
+#    secret: ${APP_SECRET_KEY:VGhpcyBteSBzZWNyZXQga2V5IGZvciBBcHBsaWNhdGlvbi4gUGxlYXNlIGNoYW5nZSBpbiBwcm9kdWN0aW9uLg==}
+#    token-validity-in-seconds: 86400
+#    token-validity-in-seconds-for-remember-me: 604800
+#  cors:
+#    allowed-origin-patterns: '*'
+#    allowed-methods: '*'
+#    allowed-headers: '*'
+#    exposed-headers: 'Authorization,Link,X-Total-Count'
+#    allow-credentials: true
+#    max-age: 1800

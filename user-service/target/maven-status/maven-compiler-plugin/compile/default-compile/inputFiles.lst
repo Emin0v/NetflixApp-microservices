@@ -1,0 +1,16 @@
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\dto\UserUpdateDTO.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\repository\UserRepository.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\controller\UserExceptionController.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\exception\NotFoundException.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\util\ApiPaths.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\dto\UserCreateReqDTO.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\service\impl\UserServiceImpl.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\dto\UserRespDTO.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\dto\UserDTO.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\model\AbstractAuditingEntity.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\service\adapter\UserAdapter.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\controller\UserController.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\exception\UserNotFoundException.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\service\IUserService.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\model\User.java
+C:\Users\Eminov\IdeaProjects\NetflixApp-microservices\user-service\src\main\java\com\company\UserServiceApplication.java
