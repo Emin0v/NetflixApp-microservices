@@ -2,6 +2,7 @@ package com.company.security;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Objects;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -65,7 +66,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
         String token = Jwts.builder()
                 .setSubject(userDTO.getUuid())
-                .setExpiration(new Date(System.currentTimeMillis() + Long.parseLong(env.getProperty("token.expiration_time"))))
+                .setExpiration(new Date(System.currentTimeMillis() + Long.parseLong(Objects.requireNonNull(env.getProperty("token.expiration_time")))))
                 .signWith(SignatureAlgorithm.HS512, env.getProperty("token.secret")).compact();
 
         res.addHeader("token", token);
