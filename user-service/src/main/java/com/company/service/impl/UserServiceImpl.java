@@ -1,6 +1,7 @@
 package com.company.service.impl;
 
 import com.company.dto.UserCreateReqDTO;
+import com.company.dto.UserDTO;
 import com.company.dto.UserRespDTO;
 import com.company.dto.UserUpdateDTO;
 import com.company.exception.UserAlreadyExistsException;
@@ -10,8 +11,13 @@ import com.company.repository.UserRepository;
 import com.company.service.IUserService;
 import com.company.service.adapter.UserAdapter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
 
 @Service
 @RequiredArgsConstructor
@@ -24,6 +30,18 @@ public class UserServiceImpl implements IUserService {
     public UserRespDTO findByUuid(String uuid) {
         User user = userRepository.findByUuid(uuid).orElseThrow(UserNotFoundException::new);
         return adapter.map(user);
+    }
+
+    @Override
+    public UserDTO findByUsername(String username) {
+        User user = userRepository.findByUsername(username).orElseThrow(UserNotFoundException::new);
+        return adapter.mapToUserDTO(user);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username){
+        User user = userRepository.findByUsername(username).orElseThrow(UserNotFoundException::new);
+        return new org.springframework.security.core.userdetails.User(username, user.getPassword(), true, true, true, true, new ArrayList<GrantedAuthority>());
     }
 
     @Override

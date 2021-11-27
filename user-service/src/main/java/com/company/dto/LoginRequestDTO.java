@@ -5,13 +5,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UserDTO {
+public class LoginRequestDTO {
 
-    private Long id;
-    private String uuid;
-    private String name;
-    private String surname;
     private String username;
     private String password;
+
 
 }
